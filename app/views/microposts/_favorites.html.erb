@@ -18,11 +18,6 @@
               <%= hidden_field_tag :micropost_id, micropost.id %>
               <%= f.submit 'Unlike', class: 'btn btn-warning btn-sm ml-3' %>
             <% end %>
-          <% else %>
-            <%= form_with(model: current_user.favorites.build, local: true) do |f| %>
-              <%= hidden_field_tag :micropost_id, micropost.id %>
-              <%= f.submit "Like", class: 'btn btn-primary btn-sm ml-3' %>
-            <% end %>
           <% end %>
         </div>
       </div>
